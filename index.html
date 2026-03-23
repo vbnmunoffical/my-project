@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator Application</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator Application</h1>
+        <div id="calculator">
+            <input type="text" id="display" disabled />
+            <div class="buttons">
+                <!-- Basic Operations -->
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="clearDisplay()">C</button>
+            </div>
+            <div class="scientific-buttons">
+                <button onclick="appendToDisplay('Math.sqrt(')">√</button>
+                <button onclick="appendToDisplay('Math.sin(')">sin</button>
+                <button onclick="appendToDisplay('Math.cos(')">cos</button>
+                <button onclick="appendToDisplay('Math.tan(')">tan</button>
+                <button onclick="appendToDisplay('**')">^</button>
+            </div>
+            <div class="currency-converter">
+                <h2>Currency Converter</h2>
+                <input type="number" id="amount" placeholder="Amount" />
+                <select id="currencyFrom">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                </select>
+                <span>to</span>
+                <select id="currencyTo">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                </select>
+                <button onclick="convertCurrency()">Convert</button>
+                <p id="conversionResult"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
